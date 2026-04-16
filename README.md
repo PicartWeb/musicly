@@ -1,3 +1,7 @@
+## 📸 Preview
+
+![App Screenshot] Musicly --> preview --> screenshots
+
 # 🎧 Spotify Clone (HTML, CSS, JS)
 
 A modern Spotify-inspired music player built with pure frontend technologies.
