@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Spotify Clone</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">Music</div>
+
+        <div class="menu">
+          <div class="menu-item active" data-page="home">
+            <i class="ri-home-5-line"></i> Home
+          </div>
+          <div class="menu-item" data-page="search">
+            <i class="ri-search-line"></i> Search
+          </div>
+          <div class="menu-item" data-page="library">
+            <i class="ri-book-2-line"></i> Library
+          </div>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Search..." />
+
+        <div id="playlist"></div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <div class="page active" id="homePage">
+          <h1>Good Evening</h1>
+          <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="page" id="searchPage">
+          <h1>Search</h1>
+          <div class="grid" id="searchGrid"></div>
+        </div>
+
+        <div class="page" id="libraryPage">
+          <h1>Your Library</h1>
+          <div class="library">Your saved songs will appear here</div>
+        </div>
+      </main>
+    </div>
+
+    <!-- PLAYER -->
+    <div class="bottom-player">
+      <div class="song-info">
+        <img id="cover" />
+        <div>
+          <span id="title"></span>
+          <small id="artist"></small>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev"><i class="ri-skip-back-fill"></i></button>
+        <button id="play"><i class="ri-play-fill"></i></button>
+        <button id="next"><i class="ri-skip-forward-fill"></i></button>
+      </div>
+
+      <div class="progress-wrap">
+        <span id="currentTime">0:00</span>
+        <div class="progress-container" id="progressContainer">
+          <div class="progress" id="progress"></div>
+        </div>
+        <span id="duration">0:00</span>
+      </div>
+
+      <input type="range" id="volume" min="0" max="1" step="0.01" />
+      <div class="footer-brand">
+        <img src="songs/cover1.jpg" alt="logo" />
+        <span>CodeWithKokizZ</span>
+      </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
